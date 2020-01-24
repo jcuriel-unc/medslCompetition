@@ -1,0 +1,26 @@
+Package: medslCompetition
+Title: Competition Processing for MEDSL Elections Returns Data. 
+Version: 0.0.0.9000
+Authors@R: c(person("John", "Curiel", role = c("aut", "trl", "cre"),
+		    email = "jcuriel@mit.edu"))
+Description: The medslCompetition package accepts MEDSL dataverse precinct elections returns data for the purpose of
+	calculating competition at the office/race level. Competition is calculated with the herfindahl index, which
+	sums the squared proportions of the aggregate vote share for a given candidate running for a particular
+	office. The Herfindahl index works such that when only one person runs for office, they are scored closer to
+	one, and when the field is completely fragmented between numerous equally strong candidates, closer to zero.
+	Note that while this package employs a number of corrections to ensure that inconsistent coding of district
+	by state does nor case sensitive fields do not interefere with results, spelling errors for the fields of
+	party, county, candidate, office, jurisdiction and more can still lead to problems. Additionally, district 
+	magnitude higher than one can throw off results. Therefore, there is the option when appropriate to add in 
+	a dataframe with the named fields of office and district so as to rank races as non-competitive whenever the
+	number of candidates within a race is less than or equal to the district magnitude. Therefore, this package 
+	should be used with caution when the quality of the data and/or election practices of the given race are not
+	known.   	
+Depends: R (>= 2.12.0)
+Imports: dplyr, foreign, tidyr, stats
+License: General 
+Author: John Curiel [aut, trl, cre] (S original)
+Maintainer: John Curiel <jcuriel@mit.edu>
+Encoding: UTF-8
+Date/Publication: 2020-01-23 11:04:00 UTC
+RoxygenNote: 6.1.1
