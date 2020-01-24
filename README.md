@@ -1,7 +1,7 @@
 # medslCompetition
 A set of functions to calculate competition at all levels of U.S. geography via the herfindahl index
 
-##Purpose 
+## Purpose 
 The medslCompetition package exists to make use of MIT Elections Data and Science Lab elections returns and calculate levels of competition
 for various levels of elections. The link to the dataverse can be found here:
 https://dataverse.harvard.edu/dataverse/medsl_election_returns
@@ -22,13 +22,13 @@ Within the context of elections, the score is calculated as the sum of squared v
 elections between two parties would be centered around a value of 0.5 (i.e. 0.5^2 + 0.5^2 = 0.5), with areas where one party's candidates 
 dominate closer to one, and areas where there are numerous parties/candidates all on par with each other closer to zero. 
 
-###Why use the Herfindahl index over other measures? 
+### Why use the Herfindahl index over other measures? 
 Typical election indices rely upon cutpoints that might occassionally be arbitrary and lead to noise in measuring election outcomes. The 
 Herfindahl index avoids such problems by allowing the various components that can be too rigid in electoral indices to instead be fluid. 
 The herfindahl index will as a mathematical function perform no worse than other electoral competitivenes indices, and likely better, 
 especially in the event where there are higher third party votes or in the context of non-partisan elections. 
 
-##How to make use of the package and functions
+## How to make use of the package and functions
 
 The medslCompetition package contains three fucntions, two related directly to processing MEDSL election returns data at the precinct 
 level, and one malleble enough to be applicable to any standard long form data set. The two MEDSL functions are localCompetition and 
@@ -36,7 +36,7 @@ medslCompetition, with the first for local elections returns data, and the secon
 the data is downloaded from the MEDSL dataverse, all one needs to do is provide the function the data.frame object, and whether they 
 would like district magnitude to be included in the calculation. 
 
-###Important note on district magnitude
+### Important note on district magnitude
 As of January 24, 2020, the field district magnitude is not included in MEDSL data. This is important because elections where the top N 
 vote getters win can throw off the result. For example, consider a typical New England town council where the top 5 candidates win. If
 one were to assume that only one person wins the office, than the herfindahl index would caluclate a scenario where each candidate won 
