@@ -30,7 +30,7 @@ especially in the event where there are higher third party votes or in the conte
 
 ## How to make use of the package and functions
 
-The medslCompetition package contains three fucntions, two related directly to processing MEDSL election returns data at the precinct 
+The medslCompetition package contains three functions, two related directly to processing MEDSL election returns data at the precinct 
 level, and one malleble enough to be applicable to any standard long form data set. The two MEDSL functions are localCompetition and 
 medslCompetition, with the first for local elections returns data, and the second for all other levels of competition. So long as 
 the data is downloaded from the MEDSL dataverse, all one needs to do is provide the function the data.frame object, and whether they 
